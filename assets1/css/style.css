@@ -980,7 +980,7 @@ a:hover {
 
 .intro .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #2eca6a;
-  width: 100px;
+  width: 36px;
 }
 
 .intro .intro-item {
@@ -988,13 +988,9 @@ a:hover {
 }
 
 .intro .carousel-item-a {
-  position: relative;
-  width: 100%;
 }
 
 .intro .carousel-item-a.bg-image {
-  background-attachment: scroll;
-
 }
 
 .intro .intro-content {

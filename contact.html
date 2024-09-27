@@ -5,33 +5,27 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>EstateAgency Bootstrap Template - Index</title>
+  <title>Radha Realty</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets1/img/favicon.png" rel="icon">
+  <link href="assets1/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets1/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets1/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets1/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets1/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: EstateAgency
-  * Template URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
-  * Updated: Mar 17 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <link href="assets1/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
 </head>
 
 <body>
@@ -43,7 +37,7 @@
         <span></span>
         <span></span>
       </button>
-      <a class="navbar-brand text-brand" href="index.html">Radha <span class="color-b">Realty</span></a>
+      <a class="navbar-brand text-brand" href="index.php">Radha <span class="color-b">Realty</span></a>
 
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
@@ -101,47 +95,32 @@
     <section class="contact">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12">
-            <div class="contact-map box">
-              <div id="map" class="contact-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249555.51857530174!2d79.09724625!3d12.2276175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bacc0a5945d5011%3A0xba7d617b7c8350da!2sTiruvannamalai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1714738196217!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-              </div>
-            </div>
-          </div>
           <div class="col-sm-12 section-t8">
             <div class="row">
               <div class="col-md-7">
-                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <form id="myForm">
                   <div class="row">
                     <div class="col-md-6 mb-3">
                       <div class="form-group">
-                        <input type="text" name="name" class="form-control form-control-lg form-control-a" placeholder="Your Name" required>
+                        <input type="text" id="name" name="Your Name" class="form-control form-control-lg form-control-a" placeholder="Your Name" required>
                       </div>
                     </div>
                     <div class="col-md-6 mb-3">
                       <div class="form-group">
-                        <input name="email" type="email" class="form-control form-control-lg form-control-a" placeholder="Your Email" required>
+                        <input name="Email " id="email" type="email" class="form-control form-control-lg form-control-a" placeholder="Your Email" required>
                       </div>
                     </div>
                     <div class="col-md-12 mb-3">
                       <div class="form-group">
-                        <input type="text" name="subject" class="form-control form-control-lg form-control-a" placeholder="Subject" required>
+                        <input type="text" name="subject" id="subject" class="form-control form-control-lg form-control-a" placeholder="Subject" required>
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
-                        <textarea name="message" class="form-control" name="message" cols="45" rows="8" placeholder="Message" required></textarea>
+                        <textarea name="message" id="message" class="form-control" name="message" cols="45" rows="8" placeholder="Message" required></textarea>
                       </div>
                     </div>
-                    <div class="col-md-12 my-3">
-                      <div class="mb-3">
-                        <div class="loading">Loading</div>
-                        <div class="error-message"></div>
-                        <div class="sent-message">Your message has been sent. Thank you!</div>
-                      </div>
-                    </div>
-
-                    <div class="col-md-12 text-center">
+                    <div class="col-md-12 text-center mt-3">
                       <button type="submit" class="btn btn-a">Send Message</button>
                     </div>
                   </div>
@@ -158,10 +137,11 @@
                     </div>
                     <div class="icon-box-content">
                       <p class="mb-1">Email.
-                        <span class="color-a">contact@example.com</span>
+                        <span class="color-a">radharealtyofficial@gmail.com
+                        </span>
                       </p>
                       <p class="mb-1">Phone.
-                        <span class="color-a">+54 356 945234</span>
+                        <span class="color-a">+91 94431 26492</span>
                       </p>
                     </div>
                   </div>
@@ -177,7 +157,7 @@
                     <div class="icon-box-content">
                       <p class="mb-1">
                         No-34-F, Polur Road,
-Tiruvannamalai
+                        Tiruvannamalai
                       </p>
                     </div>
                   </div>
@@ -221,12 +201,111 @@ Tiruvannamalai
               </div>
             </div>
           </div>
+          <div class="col-sm-12 mt-5">
+            <div class="contact-map box">
+              <div id="map" class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249555.51857530174!2d79.09724625!3d12.2276175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bacc0a5945d5011%3A0xba7d617b7c8350da!2sTiruvannamalai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1714738196217!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section><!-- End Contact Single-->
 
   </main><!-- End #main -->
+  <style>
+    .call-buton .cc-calto-action-ripple {
+      z-index: 99999;
+      position: fixed;
+      right: 15px;
+      bottom: 8rem;
+      background: #03bb50;
+      width: 4rem;
+      height: 4rem;
+      padding: 1rem;
+      border-radius: 100%;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      color: #ffffff;
+      -webkit-animation: cc-calto-action-ripple 0.6s linear infinite;
+      animation: cc-calto-action-ripple 0.6s linear infinite;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      justify-items: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      text-decoration: none;
+    }
 
+    .call-buton .cc-calto-action-ripple i {
+      -webkit-transition: 0.3s ease;
+      transition: 0.3s ease;
+      font-size: 2.2rem;
+    }
+
+    .call-buton .cc-calto-action-ripple:hover i {
+      -webkit-transform: rotate(135deg);
+      transform: rotate(135deg);
+    }
+  </style>
+  <div class="call-buton">
+    <a href="tel:9443126492" type="button" class="cc-calto-action-ripple">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+  </div>
+  <!-- phone button end -->
+
+
+  <!-- whatsapp button  start -->
+  <div class="whatsapp-button">
+    <a href="https://api.whatsapp.com/send?phone=9443126492" target="_blank" class="  cc-calto-action-ripple">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+  <style>
+    /* Custom styles */
+    .whatsapp-button .cc-calto-action-ripple {
+      z-index: 99999;
+      position: fixed;
+      left: 15px;
+      bottom: 8rem;
+      background: #03bb50;
+      width: 4rem;
+      height: 4rem;
+      padding: 1rem;
+      border-radius: 100%;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      color: #ffffff;
+      -webkit-animation: cc-calto-action-ripple 0.6s linear infinite;
+      animation: cc-calto-action-ripple 0.6s linear infinite;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      justify-items: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .whatsapp-button .cc-calto-action-ripple i {
+      -webkit-transition: 0.3s ease;
+      transition: 0.3s ease;
+      font-size: 2.2rem;
+    }
+
+    .whatsapp-button .cc-calto-action-ripple:hover i {
+      -webkit-transform: rotate(135deg);
+      transform: rotate(135deg);
+    }
+  </style>
   <!-- ======= Footer ======= -->
   <section class="section-footer">
     <div class="container">
@@ -242,40 +321,12 @@ Tiruvannamalai
               </p>
             </div>
             <div class="w-footer-a">
-              
+
             </div>
           </div>
         </div>
         <div class="col-sm-12 col-md-1 section-md-t3">
-          <!-- <div class="widget-a">
-            <div class="w-header-a">
-              <h3 class="w-title-a text-brand">The Company</h3>
-            </div>
-            <div class="w-body-a">
-              <div class="w-body-a">
-                <ul class="list-unstyled">
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Site Map</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Legal</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Agent Admin</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Careers</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Affiliate</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Privacy Policy</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div> -->
+          
         </div>
         <div class="col-sm-12 col-md-5 section-md-t3">
           <div class="w-body-a">
@@ -286,10 +337,10 @@ Tiruvannamalai
           <div class="w-footer-a">
             <ul class="list-unstyled">
               <li class="color-a">
-                <span class="color-text-a">Email:</span> contact@example.com
+                <span class="color-text-a">Email:</span> radharealtyofficial@gmail.com
               </li>
               <li class="color-a">
-                <span class="color-text-a">Phone:</span> +54 356 945234
+                <span class="color-text-a">Phone:</span>  +91 94431 26492
               </li>
             </ul>
           </div>
@@ -348,30 +399,70 @@ Tiruvannamalai
             </p>
           </div>
           <div class="credits">
-            <!--
-            All the links in the footer should remain intact.
-            You can delete the links only if you purchased the pro version.
-            Licensing information: https://bootstrapmade.com/license/
-            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=EstateAgency
-          -->
             Designed by <a href="#">jkglobalitsolutions</a>
           </div>
         </div>
       </div>
     </div>
-  </footer><!-- End  Footer -->   
+  </footer><!-- End  Footer -->
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets1/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets1/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets1/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets1/js/main.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("iNHDPovnY3uE4xcFq");
+    })();
 
+    function sendMessage() {
+                var phonenumber = "+8438438413"; // Your WhatsApp phone number
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var subject = document.getElementById("subject").value;
+                var message = document.getElementById("message").value;
+        
+          var url = "https://wa.me/" + phonenumber + "?text=" +
+              "Name: " + name + "%0a" +
+              "Email: " + email + "%0a" +
+              "subject: " + subject + "%0a" +
+              "Message: " + message + "%0a" +
+              "This message is sent via the contact form on our website.";
+        
+            window.open(url, '_blank').focus();
+          }
+
+    function sendEmail() {
+      var templateParams = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        subject : document.getElementById("subject").value,
+        message: document.getElementById("message").value
+      };
+
+      emailjs.send("service_nyyw4bk", "template_qxyf97h", templateParams)
+        .then(function(response) {
+          console.log("Email sent successfully!", response);
+          alert("Email sent successfully!");
+        }, function(error) {
+          console.error("Email sending failed:", error);
+          alert("Email sending failed. Please try again later.");
+        });
+    }
+
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent default form submission
+      sendMessage(); // Send message via WhatsApp
+      sendEmail(); // Send email
+    });
+  </script>
 </body>
 
 </html>

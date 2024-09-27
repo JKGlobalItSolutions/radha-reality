@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #2ec96a ;
+      margin: 0;
+    }
+    form {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    form:hover {
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+    h2 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+      text-align: left;
+      font-weight: 500;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+    }
+    input:focus {
+      border-color: #62b883;
+      outline: none;
+    }
+    button {
+      width: 100%;
+      padding: 15px;
+      background-color: #2ec96a;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #01ff62;
+    }
+    .show-password {
+      display: block;
+      margin-bottom: 20px;
+      cursor: pointer;
+      color: #007bff;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+    .show-password:hover {
+      text-decoration: underline;
+      color: #0056b3;
+    }
+    #error-message {
+      color: red;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <form id="loginForm">
+    <h2>Login Page</h2>
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" required>
+    <span class="show-password" onclick="togglePassword()">Show Password</span>
+
+    <button type="submit">Login</button>
+    <div id="error-message"></div>
+  </form>
+
+  <script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCh-Dq07x2LhQQckEE-QCf7RPKlqs4DV6w",
+      authDomain: "fir-login-9c872.firebaseapp.com",
+      projectId: "fir-login-9c872",
+      storageBucket: "fir-login-9c872.appspot.com",
+      messagingSenderId: "411249060600",
+      appId: "1:411249060600:web:3d5007178a5a446ddb290d",
+      measurementId: "G-94BJ0XSHDS"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    // Get elements
+    const loginForm = document.getElementById('loginForm');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const errorMessage = document.getElementById('error-message');
+
+    // Toggle password visibility
+    function togglePassword() {
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+      } else {
+        passwordInput.type = 'password';
+      }
+    }
+
+    // Add login event
+    loginForm.addEventListener('submit', e => {
+      e.preventDefault();
+      
+      const email = emailInput.value;
+      const password = passwordInput.value;
+
+      // Sign in user
+      firebase.auth().signInWithEmailAndPassword(email, password)
+        .then(userCredential => {
+          // Clear error message
+          errorMessage.textContent = '';
+          // Redirect to index.html
+          window.location.href = 'admin.html';
+        })
+        .catch(error => {
+          // Display error message and alert
+          errorMessage.textContent = error.message;
+          alert('Incorrect email or password');
+        });
+    });
+  </script>
+</body>
+</html>
