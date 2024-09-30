@@ -421,10 +421,6 @@
     // Initialize Swiper for property carousel
     var swiper = new Swiper('#property-carousel', {
       loop: true,
-      autoplay: {
-        delay: 3000, // Delay between slides in milliseconds
-        disableOnInteraction: false, // Continue autoplay after interaction
-      },
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -434,15 +430,11 @@
         prevEl: '.swiper-button-prev',
       },
     });
-  
+
     // Initialize Swiper for latest properties carousel
     var latestPropertiesSwiper = new Swiper('#latest-properties-carousel', {
       slidesPerView: 3,
       spaceBetween: 30,
-      autoplay: {
-        delay: 3000, // Delay between slides in milliseconds
-        disableOnInteraction: false, // Continue autoplay after interaction
-      },
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -453,7 +445,6 @@
       },
     });
   </script>
-  
 </body>
 
 </html>
