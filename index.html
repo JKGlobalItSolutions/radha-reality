@@ -63,7 +63,7 @@
 
   <main id="main " class="mt-5 pt-5">
     <!-- ======= Slider Section ======= -->
-    <section class="slider-section">
+    <section class="slider-section mt-3">
       <div id="property-carousel" class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -417,43 +417,43 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script>
-    // Initialize Swiper for property carousel
-    var swiper = new Swiper('#property-carousel', {
-      loop: true,
-      autoplay: {
-        delay: 3000, // Delay between slides in milliseconds
-        disableOnInteraction: false, // Continue autoplay after interaction
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-  
-    // Initialize Swiper for latest properties carousel
-    var latestPropertiesSwiper = new Swiper('#latest-properties-carousel', {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      autoplay: {
-        delay: 3000, // Delay between slides in milliseconds
-        disableOnInteraction: false, // Continue autoplay after interaction
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-  </script>
-  
+<script>
+  // Initialize Swiper for property carousel
+  var swiper = new Swiper('#property-carousel', {
+    loop: true,
+    autoplay: {
+      delay: 3000, // Delay between slides in milliseconds
+      disableOnInteraction: false, // Continue autoplay after interaction
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  // Initialize Swiper for latest properties carousel
+  var latestPropertiesSwiper = new Swiper('#latest-properties-carousel', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    autoplay: {
+      delay: 3000, // Delay between slides in milliseconds
+      disableOnInteraction: false, // Continue autoplay after interaction
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+
 </body>
 
 </html>
