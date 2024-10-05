@@ -164,149 +164,67 @@
           </div>
         </div>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="carousel-item-b swiper-slide">
-                        <div class="card-box-a card-shadow">
-                            <div class="img-box-a">
-                                <img src="assets/img/property/659928c9d4a08_1704536265.jpg" alt="" class="img-a img-fluid">
-                            </div>
-                            <div class="card-overlay">
-                                <div class="card-overlay-a-content">
-                                    <div class="card-header-a">
-                                        <h2 class="card-title-a">
-                                            <a href="property-single.html">Tiruvannamalai</a>
-                                        </h2>
-                                    </div>
-                                    <div class="card-body-a">
-                                        <div class="price-box d-flex">
-                                            <span class="price-a">price | Rs: 12.000</span>
-                                        </div>
-                                        <a href="property-single.html" class="link-a">Click here to view
-                                            <span class="bi bi-chevron-right"></span>
-                                        </a>
-                                    </div>
-                                    <div class="card-footer-a">
-                                        <ul class="card-info d-flex justify-content-around">
-                                            <li>
-                                                <h4 class="card-info-title">Area</h4>
-                                                <span>340m<sup>2</sup></span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+<!-- ======= Property Grid ======= -->
+<section class="property-grid grid">
+  <div class="container">
+    <div class="row" id="galleryContainer">
+      <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+        import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-firestore.js";
+    
+        const firebaseConfig = {
+          apiKey: "AIzaSyA0QZ3-v29eEelAfhlha5RHJZBuJ6mekes",
+          authDomain: "radha-realty-99472.firebaseapp.com",
+          projectId: "radha-realty-99472",
+          storageBucket: "radha-realty-99472.appspot.com",
+          messagingSenderId: "125909486002",
+          appId: "1:125909486002:web:bbcdefb22a1922ea843cab",
+          measurementId: "G-JNV02788XZ"
+        };
+    
+        const app = initializeApp(firebaseConfig);
+        const firestore = getFirestore(app);
+    
+        document.addEventListener('DOMContentLoaded', async () => {
+          const galleryContainer = document.getElementById('galleryContainer');
+          let count = 0; // Initialize counter
+    
+          try {
+            const querySnapshot = await getDocs(collection(firestore, 'PropertyImage'));
+            querySnapshot.forEach((doc) => {
+              if (count < 4) { // Limit to only 4 images
+                const hotel = doc.data();
+                const card = document.createElement('div');
+                card.classList.add('col-md-6');
+                card.innerHTML = `
+                  <div class="card-box-a card-shadow">
+                    <div class="img-box-a">
+                      <img src="${hotel.imageUrl}" alt="" class="img-a img-fluid">
+                    </div>
+                    <div class="card-overlay">
+                      <div class="card-overlay-a-content">
+                        <div class="card-header-a">
+                          <h2 class="card-title-a">
+                            <a href="#" style="text-transform: uppercase;" >${hotel.hotelName}</a>
+                          </h2>
                         </div>
-                    </div><!-- End carousel item -->
-                </div>
-        
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="carousel-item-b swiper-slide">
-                        <div class="card-box-a card-shadow">
-                            <div class="img-box-a">
-                                <img src="assets/img/property/65f56ca8315b7_1710582952.webp" alt="" class="img-a img-fluid">
-                            </div>
-                            <div class="card-overlay">
-                                <div class="card-overlay-a-content">
-                                    <div class="card-header-a">
-                                        <h2 class="card-title-a">
-                                            <a href="property-single.html">Tiruvannamalai</a>
-                                        </h2>
-                                    </div>
-                                    <div class="card-body-a">
-                                        <div class="price-box d-flex">
-                                            <span class="price-a">price | Rs: 12.000</span>
-                                        </div>
-                                        <a href="property-single.html" class="link-a">Click here to view
-                                            <span class="bi bi-chevron-right"></span>
-                                        </a>
-                                    </div>
-                                    <div class="card-footer-a">
-                                        <ul class="card-info d-flex justify-content-around">
-                                            <li>
-                                                <h4 class="card-info-title">Area</h4>
-                                                <span>340m<sup>2</sup></span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- End carousel item -->
-                </div>
-        
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="carousel-item-b swiper-slide">
-                        <div class="card-box-a card-shadow">
-                            <div class="img-box-a">
-                                <img src="assets/img/property/1.webp" alt="" class="img-a img-fluid">
-                            </div>
-                            <div class="card-overlay">
-                                <div class="card-overlay-a-content">
-                                    <div class="card-header-a">
-                                        <h2 class="card-title-a">
-                                            <a href="property-single.html">Tiruvannamalai</a>
-                                        </h2>
-                                    </div>
-                                    <div class="card-body-a">
-                                        <div class="price-box d-flex">
-                                            <span class="price-a">price | Rs: 12.000</span>
-                                        </div>
-                                        <a href="property-single.html" class="link-a">Click here to view
-                                            <span class="bi bi-chevron-right"></span>
-                                        </a>
-                                    </div>
-                                    <div class="card-footer-a">
-                                        <ul class="card-info d-flex justify-content-around">
-                                            <li>
-                                                <h4 class="card-info-title">Area</h4>
-                                                <span>340m<sup>2</sup></span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- End carousel item -->
-                </div>
-        
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="carousel-item-b swiper-slide">
-                        <div class="card-box-a card-shadow">
-                            <div class="img-box-a">
-                                <img src="assets/img/property/2.jpg" alt="" class="img-a img-fluid">
-                            </div>
-                            <div class="card-overlay">
-                                <div class="card-overlay-a-content">
-                                    <div class="card-header-a">
-                                        <h2 class="card-title-a">
-                                            <a href="property-single.html">Tiruvannamalai</a>
-                                        </h2>
-                                    </div>
-                                    <div class="card-body-a">
-                                        <div class="price-box d-flex">
-                                            <span class="price-a">price | Rs: 12.000</span>
-                                        </div>
-                                        <a href="property-single.html" class="link-a">Click here to view
-                                            <span class="bi bi-chevron-right"></span>
-                                        </a>
-                                    </div>
-                                    <div class="card-footer-a">
-                                        <ul class="card-info d-flex justify-content-around">
-                                            <li>
-                                                <h4 class="card-info-title">Area</h4>
-                                                <span>340m<sup>2</sup></span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- End carousel item -->
-                </div>
-            </div>
-        </div>
+                      </div>
+                    </div>
+                  </div>
+                `;
+                galleryContainer.appendChild(card);
+                count++; // Increment counter
+              }
+            });
+          } catch (error) {
+            console.error('Error fetching images:', error);
+          }
+        });
+      </script>
+    </div>
+  </div>
+</section><!-- End Property Grid Single-->
+
         
 
   </main><!-- End #main -->
