@@ -195,20 +195,12 @@
               if (count < 4) { // Limit to only 4 images
                 const hotel = doc.data();
                 const card = document.createElement('div');
-                card.classList.add('col-md-6');
+                card.classList.add('col-md-6', 'mb-4'); // Bootstrap grid column and margin for spacing
                 card.innerHTML = `
-                  <div class="card-box-a card-shadow">
-                    <div class="img-box-a">
-                      <img src="${hotel.imageUrl}" alt="" class="img-a img-fluid">
-                    </div>
-                    <div class="card-overlay">
-                      <div class="card-overlay-a-content">
-                        <div class="card-header-a">
-                          <h2 class="card-title-a">
-                            <a href="#" style="text-transform: uppercase;" >${hotel.hotelName}</a>
-                          </h2>
-                        </div>
-                      </div>
+                  <div class="card">
+                    <img src="${hotel.imageUrl}" alt="${hotel.hotelName}" class="card-img-top img-fluid" style="height: 18rem; object-fit: cover;">
+                    <div class="card-body">
+                      <h5 class="card-title text-uppercase">${hotel.hotelName}</h5>
                     </div>
                   </div>
                 `;
@@ -221,9 +213,49 @@
           }
         });
       </script>
+            <style>
+              /* Container for the hover effects */
+              .property-card {
+                overflow: hidden;
+                border: 1px solid #ddd;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+              }
+      
+              .property-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+              }
+      
+              /* Image container */
+              .img-container {
+                overflow: hidden;
+              }
+      
+              /* Hover effect for image (slight zoom-in) */
+              .property-card img {
+                transition: transform 0.4s ease;
+              }
+      
+              .property-card:hover img {
+                transform: scale(1.1); /* Slight zoom-in */
+              }
+      
+              /* Card title hover effect */
+              .card-title {
+                transition: color 0.3s ease, transform 0.3s ease;
+                font-weight: bold;
+              }
+      
+              .card-title:hover {
+                color: #ff5733; /* Text color changes on hover */
+                transform: translateY(-5px); /* Slight upward movement */
+              }
+            </style>
     </div>
   </div>
 </section><!-- End Property Grid Single-->
+
+<!-- You no longer need custom CSS since Bootstrap handles the layout -->
 
         
 
