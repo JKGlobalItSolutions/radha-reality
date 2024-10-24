@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radha Realty Admin</title>
+  <link href="../assets/img/favicon.JPG" rel="icon">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .navbar {
+      background-color: #2ec96a;
+    }
+
+    .navbar-brand,
+    .nav-link,
+    .navbar-toggler-icon {
+      color: white !important;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+    }
+
+    .container h2 {
+      color: #2ec96a;
+    }
+
+    .btn-primary {
+      background-color: #2ec96a;
+      border-color: #2ec96a;
+    }
+
+    .btn-primary:hover {
+      background-color: #2ec96a;
+      border-color: #2ec96a;
+    }
+
+    .btn-danger {
+      background-color: #2ec96a;
+      border-color: #2ec96a;
+    }
+
+    .btn-danger:hover {
+      background-color: #2cfa4f;
+      border-color: #5dff2b;
+    }
+
+    .form-control:focus {
+      border-color: #2ec96a;
+      box-shadow: none;
+    }
+
+    .table thead th {
+      background-color: #2ec96a;
+      color: white;
+    }
+
+    .form-group label[for="fileInput"] {
+      color: b6a68b;
+      cursor: pointer;
+    }
+
+    #uploadForm {
+      text-align: center;
+    }
+
+    #uploadForm .form-group {
+      display: inline-block;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    #uploadForm .btn-primary {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .toast {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1050;
+    }
+  </style>
+  <!-- Firebase Configuration -->
+  <script type="module">
+    // Firebase configuration and functions
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-analytics.js";
+    import { getStorage, ref, uploadBytesResumable, getDownloadURL, deleteObject } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-storage.js";
+    import { getFirestore, collection, addDoc, doc, updateDoc, deleteDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-firestore.js";
+    import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyA0QZ3-v29eEelAfhlha5RHJZBuJ6mekes",
+      authDomain: "radha-realty-99472.firebaseapp.com",
+      projectId: "radha-realty-99472",
+      storageBucket: "radha-realty-99472.appspot.com",
+      messagingSenderId: "125909486002",
+      appId: "1:125909486002:web:bbcdefb22a1922ea843cab",
+      measurementId: "G-JNV02788XZ"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const storage = getStorage(app);
+    const firestore = getFirestore(app);
+    const auth = getAuth(app);
+
+    document.addEventListener('DOMContentLoaded', () => {
+      onAuthStateChanged(auth, (user) => {
+        if (!user) {
+          window.location.href = 'login.html'; // Redirect to login page if not authenticated
+          return;
+        }
+
+        document.getElementById('propertyForm').addEventListener('submit', async (e) => {
+          e.preventDefault();
+
+          const propertyName = document.getElementById('propertyName').value;
+          const location = document.getElementById('location').value;
+          const totalPlots = document.getElementById('totalPlots').value;
+          const soldPlots = document.getElementById('soldPlots').value;
+          const remainingPlots = document.getElementById('remainingPlots').value;
+          const file = document.getElementById('imageUpload').files[0];
+
+          if (!file) {
+            alert("Please choose an image to upload first.");
+            return;
+          }
+
+          // Disable the submit button to prevent multiple submissions
+          const submitButton = document.querySelector('#propertyForm button[type="submit"]');
+          submitButton.disabled = true;
+
+          try {
+            const storageRef = ref(storage, 'images/' + file.name);
+            const uploadTask = uploadBytesResumable(storageRef, file);
+
+            uploadTask.on('state_changed',
+              null, // No progress handler
+              (error) => {
+                console.error('Upload failed:', error);
+                // Re-enable the submit button on error
+                submitButton.disabled = false;
+              },
+              async () => {
+                const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
+                await addDoc(collection(firestore, 'PropertyImage'), {
+                  propertyName,
+                  location,
+                  totalPlots,
+                  soldPlots,
+                  remainingPlots,
+                  imageUrl: downloadURL,
+                  imageName: file.name
+                });
+
+                // Show success message
+                showToast();
+                // Load images to refresh the table
+                loadImages();
+                // Clear the form
+                document.getElementById('propertyForm').reset();
+              }
+            );
+          } catch (error) {
+            console.error('Error uploading file:', error);
+            // Re-enable the submit button on error
+            submitButton.disabled = false;
+          }
+        });
+
+        const loadImages = async () => {
+          const imageTable = document.getElementById('imageTableBody');
+          imageTable.innerHTML = '';
+
+          try {
+            const querySnapshot = await getDocs(collection(firestore, 'PropertyImage'));
+            querySnapshot.forEach((doc) => {
+              const property = doc.data();
+              const row = document.createElement('tr');
+              row.innerHTML = `
+                <td><img src="${property.imageUrl}" class="img-fluid" width="100" /></td>
+                <td>${property.propertyName}</td>
+                <td>${property.location}</td>
+                <td>${property.totalPlots}</td>
+                <td>${property.soldPlots}</td>
+                <td>${property.remainingPlots}</td>
+                <td><button class="btn btn-primary btn-sm" onclick="editImage('${property.imageName}', '${property.imageUrl}', '${doc.id}', '${property.propertyName}', '${property.location}', ${property.totalPlots}, ${property.soldPlots}, ${property.remainingPlots})">Edit</button></td>
+                <td><button class="btn btn-danger btn-sm" onclick="deleteImage('${property.imageName}', '${doc.id}')">Delete</button></td>`;
+              imageTable.appendChild(row);
+            });
+          } catch (error) {
+            console.error('Error loading images:', error);
+          }
+        };
+
+        window.editImage = (imageName, url, docId, propertyName, location, totalPlots, soldPlots, remainingPlots) => {
+          document.getElementById('editSection').innerHTML = `
+            <h2>Edit Property</h2>
+            <img src="${url}" class="card-head shadow-lg mt-3" height="150px" width="auto" />
+            <form id="editForm">
+              <div class="form-group my-3">
+                <label for="editPropertyName">Property Name</label>
+                <input type="text" id="editPropertyName" value="${propertyName}" class="form-control" required />
+              </div>
+              <div class="form-group my-3">
+                <label for="editLocation">Location</label>
+                <input type="text" id="editLocation" value="${location}" class="form-control" required />
+              </div>
+              <div class="form-group my-3">
+                <label for="editTotalPlots">Total Plots</label>
+                <input type="number" id="editTotalPlots" value="${totalPlots}" class="form-control" required />
+              </div>
+              <div class="form-group my-3">
+                <label for="editSoldPlots">Sold Plots</label>
+                <input type="number" id="editSoldPlots" value="${soldPlots}" class="form-control" required />
+              </div>
+              <div class="form-group my-3">
+                <label for="editRemainingPlots">Remaining Plots</label>
+                <input type="number" id="editRemainingPlots" value="${remainingPlots}" class="form-control" required />
+              </div>
+              <button type="submit" class="btn btn-primary">Update Property</button>
+            </form>
+          `;
+          document.getElementById('editForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            await updateDoc(doc(firestore, 'PropertyImage', docId), {
+              propertyName: document.getElementById('editPropertyName').value,
+              location: document.getElementById('editLocation').value,
+              totalPlots: parseInt(document.getElementById('editTotalPlots').value),
+              soldPlots: parseInt(document.getElementById('editSoldPlots').value),
+              remainingPlots: parseInt(document.getElementById('editRemainingPlots').value)
+            });
+            loadImages();
+            document.getElementById('editSection').innerHTML = '';
+          });
+        };
+
+        window.deleteImage = async (imageName, docId) => {
+          const desertRef = ref(storage, 'images/' + imageName);
+          await deleteObject(desertRef).then(async () => {
+            await deleteDoc(doc(firestore, 'PropertyImage', docId));
+            loadImages();
+          }).catch((error) => {
+            console.error('Error removing file:', error);
+          });
+        };
+
+        const showToast = () => {
+          const toastEl = document.getElementById('toast');
+          const toast = new bootstrap.Toast(toastEl);
+          toast.show();
+        };
+
+        loadImages();
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Radha Realty Admin</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <button class="btn btn-outline-light" id="logoutButton">Logout</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-5">
+    <h2>Add Property</h2>
+    <form id="propertyForm" enctype="multipart/form-data">
+      <div class="form-group my-3">
+        <label for="propertyName">Property Name</label>
+        <input type="text" id="propertyName" class="form-control" required />
+      </div>
+      <div class="form-group my-3">
+        <label for="location">Location</label>
+        <input type="text" id="location" class="form-control" required />
+      </div>
+      <div class="form-group my-3">
+        <label for="totalPlots">Total Plots</label>
+        <input type="number" id="totalPlots" class="form-control" required />
+      </div>
+      <div class="form-group my-3">
+        <label for="soldPlots">Sold Plots</label>
+        <input type="number" id="soldPlots" class="form-control" required />
+      </div>
+      <div class="form-group my-3">
+        <label for="remainingPlots">Remaining Plots</label>
+        <input type="number" id="remainingPlots" class="form-control" required />
+      </div>
+      <div class="form-group my-3">
+        <label for="imageUpload">Property Image</label>
+        <input type="file" id="imageUpload" class="form-control" required />
+      </div>
+      <button type="submit" class="btn btn-primary">Add Property</button>
+    </form>
+
+    <div class="mt-5">
+      <h2>Uploaded Properties</h2>
+      <table class="table table-bordered mt-3">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Property Name</th>
+            <th>Location</th>
+            <th>Total Plots</th>
+            <th>Sold Plots</th>
+            <th>Remaining Plots</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="imageTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="me-auto">Success</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Property added successfully!
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-ZC+tr/O65nPqM8S48Z+M3a40vmBX+nWJ5OX+pxlvIKPQuj5y2hlZzTG0ORhYJR7P" crossorigin="anonymous"></script>
+  <script>
+    document.getElementById('logoutButton').addEventListener('click', () => {
+      signOut(auth).then(() => {
+        window.location.href = 'login.html'; // Redirect to login page
+      }).catch((error) => {
+        console.error('Error signing out:', error);
+      });
+    });
+  </script>
+</body>
+
+</html>

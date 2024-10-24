@@ -105,6 +105,93 @@
         <span class="heading-divider mx-auto text-light"></span>
       </div>
     </section>
+    <!-- ======= Property Grid ======= -->
+    <section class="property-grid grid">
+      <div class="container">
+        <div class="row" id="galleryContainer">
+          <script type="module">
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+            import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-firestore.js";
+        
+            const firebaseConfig = {
+              apiKey: "AIzaSyA0QZ3-v29eEelAfhlha5RHJZBuJ6mekes",
+              authDomain: "radha-realty-99472.firebaseapp.com",
+              projectId: "radha-realty-99472",
+              storageBucket: "radha-realty-99472.appspot.com",
+              messagingSenderId: "125909486002",
+              appId: "1:125909486002:web:bbcdefb22a1922ea843cab",
+              measurementId: "G-JNV02788XZ"
+            };
+        
+            const app = initializeApp(firebaseConfig);
+            const firestore = getFirestore(app);
+        
+            document.addEventListener('DOMContentLoaded', async () => {
+              const galleryContainer = document.getElementById('galleryContainer');
+        
+              try {
+                const querySnapshot = await getDocs(collection(firestore, 'PropertyImage'));
+                querySnapshot.forEach((doc) => {
+                  const hotel = doc.data();
+                  const card = document.createElement('div');
+                  card.classList.add('col-md-6');
+                  card.innerHTML = `
+                  <div class="card m-3">
+                    <img src="${hotel.imageUrl}" alt="${hotel.hotelName}" class="card-img-top img-fluid" style="height: 18rem; ">
+                    <div class="card-body">
+                      <h5 class="card-title text-uppercase">${hotel.hotelName}</h5>
+                    </div>
+                  </div>
+                  `;
+                  galleryContainer.appendChild(card);
+                });
+              } catch (error) {
+                console.error('Error fetching images:', error);
+              }
+            });
+          </script>
+                <style>
+                  /* Container for the hover effects */
+                  .property-card {
+                    overflow: hidden;
+                    border: 1px solid #ddd;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                  }
+          
+                  .property-card:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                  }
+          
+                  /* Image container */
+                  .img-container {
+                    overflow: hidden;
+                  }
+          
+                  /* Hover effect for image (slight zoom-in) */
+                  .property-card img {
+                    transition: transform 0.4s ease;
+                  }
+          
+                  .property-card:hover img {
+                    transform: scale(1.1); /* Slight zoom-in */
+                  }
+          
+                  /* Card title hover effect */
+                  .card-title {
+                    transition: color 0.3s ease, transform 0.3s ease;
+                    font-weight: bold;
+                  }
+          
+                  .card-title:hover {
+                    color: #ff5733; /* Text color changes on hover */
+                    transform: translateY(-5px); /* Slight upward movement */
+                  }
+                </style>
+        </div>
+      </div>
+    </section>
+    <!-- End Property Grid Single-->
     <section class="py-3" style="background-color: #f3f6fa;">
         <div class="container">
           <form class="newsletterform py-6" id="newsletterform" action="https://www.radhasrealty.com/sendsubscribe" style="background: #ffffff;
