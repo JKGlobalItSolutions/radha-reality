@@ -178,14 +178,19 @@
               const propertyCards = document.getElementById('propertyCards');
               const querySnapshot = await getDocs(collection(db, "PropertyImage"));
               
+              if (querySnapshot.empty) {
+                  propertyCards.innerHTML = '<p class="col-12 text-center">No properties found.</p>';
+                  return;
+              }
+  
               querySnapshot.forEach((doc) => {
                   const property = doc.data();
-                  const card = createPropertyCard(property);
+                  const card = createPropertyCard(doc.id, property);
                   propertyCards.appendChild(card);
               });
           }
   
-          function createPropertyCard(property) {
+          function createPropertyCard(id, property) {
               const card = document.createElement('div');
               card.className = 'col';
               card.innerHTML = `
@@ -223,7 +228,7 @@
                           </ul>
                       </div>
                       <div class="card-footer bg-transparent border-top-0">
-                          <a href="#" class="btn btn-outline-primary w-100">View Details</a>
+                          <a href="propertydetails.html?id=${id}" class="btn btn-outline-primary w-100">View Details</a>
                       </div>
                   </div>
               `;

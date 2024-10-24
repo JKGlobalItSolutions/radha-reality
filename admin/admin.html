@@ -144,6 +144,7 @@
           const totalPlots = parseInt(document.getElementById('totalPlots').value);
           const soldPlots = parseInt(document.getElementById('soldPlots').value);
           const remainingPlots = calculateRemainingPlots(totalPlots, soldPlots);
+          const description = document.getElementById('description').value;
           const file = document.getElementById('imageUpload').files[0];
 
           if (!file) {
@@ -174,6 +175,7 @@
                   totalPlots,
                   soldPlots,
                   remainingPlots,
+                  description,
                   imageUrl: downloadURL,
                   imageName: file.name
                 });
@@ -214,7 +216,7 @@
                 <td>${property.totalPlots}</td>
                 <td>${property.soldPlots}</td>
                 <td>${property.remainingPlots}</td>
-                <td><button class="btn btn-primary btn-sm" onclick="editImage('${property.imageName}', '${property.imageUrl}', '${doc.id}', '${property.propertyName}', '${property.location}', ${property.totalPlots}, ${property.soldPlots}, ${property.remainingPlots})">Edit</button></td>
+                <td><button class="btn btn-primary btn-sm" onclick="editImage('${property.imageName}', '${property.imageUrl}', '${doc.id}', '${property.propertyName}', '${property.location}', ${property.totalPlots}, ${property.soldPlots}, ${property.remainingPlots}, '${property.description}')">Edit</button></td>
                 <td><button class="btn btn-danger btn-sm" onclick="deleteImage('${property.imageName}', '${doc.id}')">Delete</button></td>`;
               imageTable.appendChild(row);
             });
@@ -223,12 +225,13 @@
           }
         };
 
-        window.editImage = (imageName, url, docId, propertyName, location, totalPlots, soldPlots, remainingPlots) => {
+        window.editImage = (imageName, url, docId, propertyName, location, totalPlots, soldPlots, remainingPlots, description) => {
           document.getElementById('editPropertyName').value = propertyName;
           document.getElementById('editLocation').value = location;
           document.getElementById('editTotalPlots').value = totalPlots;
           document.getElementById('editSoldPlots').value = soldPlots;
           document.getElementById('editRemainingPlots').value = remainingPlots;
+          document.getElementById('editDescription').value = description;
           document.getElementById('editImagePreview').src = url;
           document.getElementById('editForm').setAttribute('data-doc-id', docId);
           document.getElementById('editForm').setAttribute('data-image-name', imageName);
@@ -249,7 +252,8 @@
             location: document.getElementById('editLocation').value,
             totalPlots: totalPlots,
             soldPlots: soldPlots,
-            remainingPlots: remainingPlots
+            remainingPlots: remainingPlots,
+            description: document.getElementById('editDescription').value
           });
           loadImages();
           const editModal = bootstrap.Modal.getInstance(document.getElementById('editModal'));
@@ -350,17 +354,22 @@
               <label for="location" class="form-label">Location</label>
               <input type="text" class="form-control" id="location" required>
             </div>
-            <div  class="mb-3">
+            <div class="mb-3">
               <label for="totalPlots" class="form-label">Total Plots</label>
               <input type="number" class="form-control" id="totalPlots" required>
             </div>
             <div class="mb-3">
+              
               <label for="soldPlots" class="form-label">Sold Plots</label>
               <input type="number" class="form-control" id="soldPlots" required>
             </div>
             <div class="mb-3">
               <label for="remainingPlots" class="form-label">Remaining Plots</label>
               <input type="number" class="form-control" id="remainingPlots" readonly>
+            </div>
+            <div class="mb-3">
+              <label for="description" class="form-label">About Project</label>
+              <textarea class="form-control" id="description" rows="3"></textarea>
             </div>
             <div class="mb-3">
               <label for="imageUpload" class="form-label">Property Image</label>
@@ -405,6 +414,10 @@
             <div class="mb-3">
               <label for="editRemainingPlots" class="form-label">Remaining Plots</label>
               <input type="number" class="form-control" id="editRemainingPlots" readonly>
+            </div>
+            <div class="mb-3">
+              <label for="editDescription" class="form-label">About Project</label>
+              <textarea class="form-control" id="editDescription" rows="3"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Update Property</button>
           </form>

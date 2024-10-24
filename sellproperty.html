@@ -33,9 +33,9 @@
 <body style="align-items: center" class="m-0">
   <header>
     <div class="d-flex flex-column flex-md-row align-items-center justify-content-md-between">
-      <a href="/"
-        class="px-3 d-flex d-lg-block d-none align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none justify-content-center justify-content-md-start">
-        <img src="./images/logo/logo.JPG" height="70" alt="" />
+      <a href="index.html"
+        class="px-3 d-flex  align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none justify-content-center justify-content-md-start">
+        <img src="./images/logo/logo.JPG" class="d-lg-block d-none"   height="70" alt="" />
       </a>
       <a href=""></a>
       <ul class="nav nav-pills align-items-center justify-content-center justify-content-md-end">
@@ -47,16 +47,15 @@
         <li class="nav-item px-1 d-flex justify-content-center align-items-center">
           <a href="#" href="tel:9443126492" class="nav-link text-dark"> +91 9443126492</a>
         </li>
-        <li style="text-decoration: none" class="nav-item" id="enquiry-link">
-          <a href="#" class="nav-link text-light bg-success  me-2">Sign in</a>
+        <li style="text-decoration: none" class="nav-item" id="">
+          <a href="admin/login.html" class="nav-link text-light bg-success  me-2">Sign in</a>
         </li>
       </ul>
     </div>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light p-2">
-      <a href="index.html"
-        class="px-3 d-flex  align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none justify-content-center justify-content-md-start">
-        <img src="./images/logo/logo.JPG" class="d-lg-block d-none"   height="70" alt="" />
+      <a class="navbar-brand d-lg-none" href="#">
+        <img src="images/logo/logo.JPG" alt="Logo" style="height: 40px;">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,7 +64,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav d-flex justify-content-around w-100">
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="index.html">Home</a> <!-- Bootstrap's active class -->
+            <a class="nav-link text-light active px-4" aria-current="page" href="index.html">Home</a> <!-- Bootstrap's active class -->
           </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
@@ -80,7 +79,7 @@
             <a class="nav-link" href="buyproperty.html">Buy Property</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light active px-4" href="sellproperty.html">Sell Property</a>
+            <a class="nav-link" href="sellproperty.html">Sell Property</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact Us</a>
