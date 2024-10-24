@@ -1,0 +1,184 @@
+.banner {
+    background-image: url(./images/Rectangle%203.jpg);
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .custom-img {
+    max-width: 100%;
+    height: auto;
+  }
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  #enquiry-link {
+    cursor: pointer;
+    color: #007BFF;
+    text-decoration: underline;
+  }
+
+  /* Popup Form Styles */
+  .popup-form {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    margin-top: 10px;
+  }
+
+  input,
+  textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #d21312;
+    /* Set border color to #d21312 */
+    border-radius: 4px;
+  }
+
+  button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #d21312;
+    /* Set background color to #d21312 */
+    color: #fff;
+    /* Set text color to white */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #a10c0c;
+    /* Slightly darker shade for hover effect */
+  }
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .slide img {
+    width: 100%;
+    display: block;
+  }
+  
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  .dropdown:hover > .dropdown-menu {
+    display: block !important;
+  }
+  .dropdown-submenu:hover > .dropdown-menu {
+    display: block !important;
+    left: 100%;
+    margin-top: -37px;
+  }
+  .dropdown-item {
+    font-size: small; /* 13px */
+  }
+  .dropdown-toggle::after {
+    font-size: var(--font-md);
+    margin-bottom: -2px;
+  }
+  .dropdown-menu li a.active {
+    color: #fff;
+  }
+  .custom-toggle-arrow {
+    font-size: 18px;
+    margin-top: 1px;
+    line-height: 12px;
+  }
+  @media (max-width: 991.98px) { /* Tablet and Mobile view */
+    .dropdown-menu {
+      position: static;
+      float: none;
+      width: 100%;
+    }
+    .dropdown-submenu .dropdown-menu {
+      position: static;
+      float: none;
+      margin-top: 0;
+      width: 100%;
+    }
+    .dropdown-submenu:hover > .dropdown-menu {
+      display: block;
+      margin-top: 0;
+    }
+    .dropdown-item {
+      display: block;
+      width: 100%;
+    }
+  }
+    .nav-link.active {
+    background-color: #28a745; /* btn-success background color */
+    color: white; /* White text for active link */
+    border-radius: 5px; /* Optional: to make it look like a button */
+    }

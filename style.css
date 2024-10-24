@@ -1,0 +1,58 @@
+  .navbar-nav .nav-item .nav-link.active {
+    color: red !important; /* Changes the text color to red */
+  }
+
+
+
+      /* Custom CSS for larger screens (laptops and above) */
+      @media (min-width: 992px) {
+        .custom-img {
+          width: 500px;
+          height: 500px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      @media (max-width: 576px) {
+        .display-4 {
+          font-size: 1.5rem; /* Adjust font size for mobile view */
+        }
+      }
+
+      .box {
+        display: flex;
+        align-items: center;
+        padding: 10px 30px;
+        border: 1px solid red;
+        background-color: red;
+        color: white;
+        border-radius: 5px;
+      }
+      
+      .box img {
+        width: 24px; /* Adjust the image size */
+        height: 24px; /* Adjust the image size */
+      }
+      
+      @media (max-width: 576px) {
+        .box {
+          flex-direction: column;
+          text-align: center;
+        }
+      
+        .box img {
+          margin-bottom: 10px; /* Space between image and text */
+        }
+      }
+      /* Hide the image on screens smaller than or equal to 768px (Bootstrap's sm breakpoint) */
+@media (max-width: 768px) {
+  .mobile-hide {
+    display: none !important;
+  }
+}
+
+
+
+
+

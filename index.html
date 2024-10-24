@@ -2,408 +2,685 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Radha's Realty</title>
+  <link rel="icon" type="image/x-icon" href="./images/fevicol.png" />
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-  <title>Radha Reality</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.JPG" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/index.css" />
 </head>
 
-<body>
-  <!-- ======= Header/Navbar ======= -->
-  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top ">
-    <div class="container">
-      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
+<body style="align-items: center" class="mt-2">
+  <header>
+    <div class="d-flex flex-column flex-md-row align-items-center justify-content-md-between">
+      <a href="/"
+        class="px-3 d-flex d-lg-block d-none align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none justify-content-center justify-content-md-start">
+        <img src="./images/logo/logo.JPG" height="70" alt="" />
+      </a>
+      <a href=""></a>
+      <ul class="nav nav-pills align-items-center justify-content-center justify-content-md-end">
+        <li class="nav-item px-1 d-flex justify-content-center align-items-center">
+          <a href="https://api.whatsapp.com/send?phone=9443126492" target="_blank">
+            <img src="./images/whatsapp_symbol.svg.png" alt="" />
+          </a>
+        </li>
+        <li class="nav-item px-1 d-flex justify-content-center align-items-center">
+          <a href="#" href="tel:9443126492" class="nav-link text-dark"> +91 9443126492</a>
+        </li>
+        <li style="text-decoration: none" class="nav-item" id="enquiry-link">
+          <a href="#" class="nav-link text-light bg-success  me-2">Sign in</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light p-2">
+      <a class="navbar-brand d-lg-none" href="#">
+        <img src="images/logo/logo.JPG" alt="Logo" style="height: 40px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand text-brand" href="index.html">Radha's <span class="color-b">Realty</span></a>
-
-      <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
-        <ul class="navbar-nav">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav d-flex justify-content-around w-100">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link text-light active px-4" aria-current="page" href="index.html">Home</a> <!-- Bootstrap's active class -->
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="about.html">About</a>
+            <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="property-grid.html">Property</a>
+            <a class="nav-link" href="projects.html">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="contact.html">Contact</a>
+            <a class="nav-link" href="construction.html">Construction</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="admin/login.html">Admin</a>
+            <a class="nav-link" href="buyproperty.html">Buy Property</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sellproperty.html">Sell Property</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
           </li>
         </ul>
       </div>
+    </nav>
 
+  </header>
+
+  <main>
+    <div class="slider">
+      <div class="slides">
+        <!-- Duplicate slides to create seamless scrolling -->
+        <div class="slide">
+          <img src="./images/slide/slide1.webp" alt="Slide 1" />
+        </div>
+        <div class="slide">
+          <img src="./images/slide/slide2.webp" alt="Slide 2" />
+        </div>
+        <div class="slide">
+          <img src="./images/slide/slide3.webp" alt="Slide 3" />
+        </div>
+        <div class="slide">
+          <img src="./images/slide/slide4.webp" alt="Slide 4" />
+        </div>
+
+        <!-- Duplicate slides again -->
+        <div class="slide">
+          <img src="./images/slide/slide1.webp" alt="Slide 1" />
+        </div>
+        <div class="slide">
+          <img src="./images/slide/slide2.webp" alt="Slide 2" />
+        </div>
+        <div class="slide">
+          <img src="./images/slide/slide3.webp" alt="Slide 3" />
+        </div>
+        <div class="slide">
+          <img src="./images/slide/slide4.webp" alt="Slide 4" />
+        </div>
+      </div>
+      <button class="nav-button prev">&#10094;</button>
+      <button class="nav-button next">&#10095;</button>
     </div>
-  </nav><!-- End Header/Navbar -->
+    <section class="container my-lg-11 my-5 home-about" data-animated-id="2">
+      <div class="box px-0">
+        <div
+          class="media d-flex flex-column flex-lg-row align-items-lg-center py-lg-8 position-relative cusstom-bg-slider-gray no-gutters">
 
-  <main id="main " class="mt-5 pt-5">
-    <!-- ======= Slider Section ======= -->
-    <section class="slider-section mt-3">
-      <div id="property-carousel" class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="assets/img/slide/slide1.webp" alt="Property 1" class="img-fluid">
-          </div>
-          <div class="swiper-slide">
-            <img src="assets/img/slide/slide2.webp" alt="Property 2" class="img-fluid">
-          </div>
-          <div class="swiper-slide">
-            <img src="assets/img/slide/slide3.webp" alt="Property 3" class="img-fluid">
-          </div>
-          <div class="swiper-slide">
-            <img src="assets/img/slide/slide4.webp" alt="Property 4" class="img-fluid">
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </div>
-    </section><!-- End Slider Section -->
+          <div class="media-body mt-3 pl-xl-8 pl-lg-3 pl-0 mt-lg-0 pr-lg-9 pr-0">
+            <h2 class="letter-spacing-263 fs-18 pl-1" style="color: #a01437;">ABOUT</h2>
+            <h2 class="my-0 mb-3 fs-lg-32 fs-22">ABOUT Radha's Realty</h2>
+            <p class="mb-2 ml-0 pr-lg-3 lh-2 text-gray-light fs-18 about_content">We fulfill your dream of owning a home
+              by providing the right plot for you. The customer feedback and trust we have is our strength. Our
+              experienced team will help you from start to finish of the registration process. We take pride in forging
+              ourselves in boundless personal connections and unmatched business networks serve to create a loyal
+              association of trust and understanding.</p>
 
-    <!-- ======= Services Section ======= -->
-    <section class="section-services section-t8">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="title-wrap d-flex justify-content-between">
-              <div class="title-box">
-                <h2 class="title-a">Our Services</h2>
-              </div>
-            </div>
+            <a href="about.html" class="rounded-lg mb-8 mb-lg-0 fs-18 about_content about_readmore"
+              style="color:#a01437;">Read More <i class="fas fa-long-arrow-alt-right mr-2"></i></a>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card-box-c foo">
-              <div class="card-header-c d-flex">
-                <div class="card-box-ico">
-                  <span class="bi bi-calendar4-week"></span>
-                </div>
-                <div class="card-title-c align-self-center">
-                  <h2 class="title-c">Buy</h2>
-                </div>
-              </div>
-              <div class="card-body-c">
-                <p class="content-c">
-                  Find the best properties for sale at the cheap price in Thiruvannamalai.
-                </p>
-              </div>
-              <div class="card-footer-c">
-                <a href="#" class="link-c link-icon">Read more
-                  <span class="bi bi-chevron-right"></span>
-                </a>
-              </div>
-            </div>
+          <div class="card border-0 col-lg-6 lg-mt-0 mt-3">
+            <img src="#" class="card-img about-img" alt="About radhasrealty">
           </div>
-          <div class="col-md-4">
-            <div class="card-box-c foo">
-              <div class="card-header-c d-flex">
-                <div class="card-box-ico">
-                  <span class="bi bi-card-checklist"></span>
-                </div>
-                <div class="card-title-c align-self-center">
-                  <h2 class="title-c">Sell</h2>
-                </div>
-              </div>
-              <div class="card-body-c">
-                <p class="content-c">
-                  Find the best properties for Buy at the cheap price in Thiruvannamalai.
-                </p>
-              </div>
-              <div class="card-footer-c">
-                <a href="#" class="link-c link-icon">Read more
-                  <span class="bi bi-chevron-right"></span>
-                </a>
-              </div>
-            </div>
-          </div>
+
         </div>
       </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Latest Properties Section ======= -->
-    <section class="section-property section-t8">
+    </section>
+    <section class="pt-5 pt-md-0 pb-5 pb-md-8 on-going-card" data-animated-id="3">
       <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="title-wrap d-flex justify-content-between">
-              <div class="title-box">
-                <h2 class="title-a">Latest Properties</h2>
-              </div>
-              <div class="title-link">
-                <a href="property-grid.html">All Property
-                  <span class="bi bi-chevron-right"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <h3 class="text-center letter-spacing-263 text-center fs-18 mb-3" style="color: #a01437;">Properties</h3>
+        <h2 class="letter-spacing-263 text-center fs-lg-32 fs-26  font-weight-bold mb-8" style="color: #292929;">Ongoing
+          Projects</h2>
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-1">
+          <div class="col pb-6 align-items-stretch">
+            <div class="card shadow-hover-1 fadeIn animated" data-animate="fadeIn">
+              <a href="#" class="text-primary">
+                <div class="hover-change-image bg-hover-overlay rounded-lg card-img-top">
 
-<!-- ======= Property Grid ======= -->
-<section class="property-grid grid">
-  <div class="container">
-    <div class="row" id="galleryContainer">
-      <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
-        import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-firestore.js";
-    
-        const firebaseConfig = {
-          apiKey: "AIzaSyA0QZ3-v29eEelAfhlha5RHJZBuJ6mekes",
-          authDomain: "radha-realty-99472.firebaseapp.com",
-          projectId: "radha-realty-99472",
-          storageBucket: "radha-realty-99472.appspot.com",
-          messagingSenderId: "125909486002",
-          appId: "1:125909486002:web:bbcdefb22a1922ea843cab",
-          measurementId: "G-JNV02788XZ"
-        };
-    
-        const app = initializeApp(firebaseConfig);
-        const firestore = getFirestore(app);
-    
-        document.addEventListener('DOMContentLoaded', async () => {
-          const galleryContainer = document.getElementById('galleryContainer');
-          let count = 0; // Initialize counter
-    
-          try {
-            const querySnapshot = await getDocs(collection(firestore, 'PropertyImage'));
-            querySnapshot.forEach((doc) => {
-              if (count < 4) { // Limit to only 4 images
-                const hotel = doc.data();
-                const card = document.createElement('div');
-                card.classList.add('col-md-6', 'mb-4'); // Bootstrap grid column and margin for spacing
-                card.innerHTML = `
-                  <div class="card">
-                    <img src="${hotel.imageUrl}" alt="${hotel.hotelName}" class="card-img-top img-fluid" style="height: 18rem; object-fit: cover;">
-                    <div class="card-body">
-                      <h5 class="card-title text-uppercase">${hotel.hotelName}</h5>
+                  <img class="card-img-top embed-responsive-item d-block"
+                    src="#"
+                    alt="ELITE" loading="lazy">
+                  <div class="card-img-overlay p-2 d-flex flex-column">
+                    <div>
+                      <span class="badge mr-2 badge-primary">For Sale</span>
                     </div>
                   </div>
-                `;
-                galleryContainer.appendChild(card);
-                count++; // Increment counter
-              }
-            });
-          } catch (error) {
-            console.error('Error fetching images:', error);
-          }
-        });
-      </script>
-            <style>
-              /* Container for the hover effects */
-              .property-card {
-                overflow: hidden;
-                border: 1px solid #ddd;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-              }
-      
-              .property-card:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-              }
-      
-              /* Image container */
-              .img-container {
-                overflow: hidden;
-              }
-      
-              /* Hover effect for image (slight zoom-in) */
-              .property-card img {
-                transition: transform 0.4s ease;
-              }
-      
-              .property-card:hover img {
-                transform: scale(1.1); /* Slight zoom-in */
-              }
-      
-              /* Card title hover effect */
-              .card-title {
-                transition: color 0.3s ease, transform 0.3s ease;
-                font-weight: bold;
-              }
-      
-              .card-title:hover {
-                color: #ff5733; /* Text color changes on hover */
-                transform: translateY(-5px); /* Slight upward movement */
-              }
-            </style>
+                </div>
+              </a>
+              <div class="card-body p-2 d-flex flex-column">
+                <p class="card-title fs-16 lh-15 my-1 font-weight-500"><a
+                    href="#"
+                    class="text-dark hover-primary">SWARNA BOOMI : ELITE</a></p>
+                <p class="card-text font-weight-500 text-gray-light mb-1">Near Ramanasharam</p>
+                <ul class="list-inline d-flex justify-content-between mb-0 flex-wrap mt-auto">
+                  <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center"
+                    data-toggle="tooltip" title="" data-original-title="">
+                    <svg class="icon icon-bedroom fs-20 text-primary"
+                      style="background-image: url('#');background-repeat: no-repeat;">
+                      <use xlink:href="#icon-bedroom"></use>
+                    </svg>
+                    539 Plots
+                  </li>
+                  <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center"
+                    data-toggle="tooltip" title="" data-original-title="">
+                    <svg class="icon icon-shower fs-20 text-primary"
+                      style="background-image: url('#');background-repeat: no-repeat;">
+                      <use xlink:href="#icon-shower"></use>
+                    </svg>
+                    137 Available
+                  </li>
+                  <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center"
+                    data-toggle="tooltip" title="" data-original-title="">
+                    <svg class="icon icon-square fs-20 text-primary"
+                      style="background-image: url('#');background-repeat: no-repeat;">
+                      <use xlink:href="#icon-square"></use>
+                    </svg>
+                    402 Sold
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer bg-transparent d-flex justify-content-between align-items-center py-3">
+                <a href="#" class="text-primary">View
+                  Detail</a>
+              </div>
+            </div>
+          </div>
+          <!-- add more cards -->
+        </div>
+      </div>
+    </section>
+    <div class="bg-gray-02 pt-lg-12 pt-6 pb-lg-12 pb-6" data-animated-id="4">
+      <div class="container">
+          <h2 class="text-primary text-center letter-spacing-263 fs-18">OUR SERVICES</h2>
+          <h3 class="text-heading lh-184 mxw-571 text-center fs-md-26 fs-20">Looking to Buy a new property or Sell an existing one?</h3>
+          <span class="heading-divider mx-auto"></span>
+              <div class="slick-slider arrow-haft-inner mt-7 mx-0 slick-initialized" data-slick-options="{&quot;slidesToShow&quot;: 5, &quot;autoplay&quot;:true,&quot;loop&quot;:true, &quot;pauseOnHover&quot;:true, &quot;infinite&quot;: true,&quot;dots&quot;:false,&quot;responsive&quot;:[{&quot;breakpoint&quot;: 992,&quot;settings&quot;: {&quot;slidesToShow&quot;:3}},{&quot;breakpoint&quot;: 768,&quot;settings&quot;: {&quot;slidesToShow&quot;: 2,&quot;arrows&quot;:false,&quot;dots&quot;:true,&quot;autoplay&quot;:true}},{&quot;breakpoint&quot;: 576,&quot;settings&quot;: {&quot;slidesToShow&quot;: 1,&quot;arrows&quot;:false,&quot;dots&quot;:true,&quot;autoplay&quot;:true}}]}"><div class="slick-prev slick-arrow" aria-label="Previous" style=""><i class="far fa-angle-left"></i></div><div class="slick-list draggable" style="height: 248px; overflow: hidden;"><div class="slick-track" style="opacity: 1; width: 3383px; transform: translate3d(-1592px, 0px, 0px);"><div class="slick-slide slick-cloned" data-slick-index="-5" id="" aria-hidden="true" style="width: 199px;" tabindex="-1"><div><div class="box px-0 lg-py-6 py-3" style="width: 100%; display: inline-block;">
+              </div></div></div><div class="slick-slide slick-cloned" data-slick-index="-4" id="" aria-hidden="true" style="width: 199px;" tabindex="-1"><div><div class="box px-0 lg-py-6 py-3" style="width: 100%; display: inline-block;">
+                  <a href="#" class="card border-0 align-items-center justify-content-center pt-7 pb-5 px-3 shadow-hover-3 bg-transparent bg-hover-white text-decoration-none" tabindex="-1">
+                      <img src="https://www.dagadevelopers.com/assets/images/dagadev/construction.png" alt="construction-img" width="64" height="64">
+                      <div class="card-body px-0 pt-5 pb-0 text-center">
+                          <h4 class="card-title fs-16 lh-2 text-dark mb-0">Construction Reference</h4>
+                      </div>
+                  </a>
+              </div></div></div><div class="slick-slide slick-cloned" data-slick-index="-3" id="" aria-hidden="true" style="width: 199px;" tabindex="-1"><div><div class="box px-0 lg-py-6 py-3" style="width: 100%; display: inline-block;">
+                  <a href="#" class="card border-0 align-items-center justify-content-center pt-7 pb-5 px-3 shadow-hover-3 bg-transparent bg-hover-white text-decoration-none" tabindex="-1">
+                      <img src="https://www.dagadevelopers.com/assets/images/dagadev/appartment.png" alt="appartment-img" width="64" height="64">
+                      <div class="card-body px-0 pt-5 pb-0 text-center">
+                          <h4 class="card-title fs-16 lh-2 text-dark mb-0">Apartment</h4>
+                      </div>
+                  </a>
+              </div></div></div><div class="slick-slide slick-cloned" data-slick-index="-2" id="" aria-hidden="true" style="width: 199px;" tabindex="-1"><div><div class="box px-0 lg-py-6 py-3" style="width: 100%; display: inline-block;">
+                  <a href="#" class="card border-0 align-items-center justify-content-center pt-7 pb-5 px-3 shadow-hover-3 bg-transparent bg-hover-white text-decoration-none" tabindex="-1">
+                      <img src="https://www.dagadevelopers.com/assets/images/dagadev/registration.png" alt="registration.png-img" width="64" height="64">
+                      <div class="card-body px-0 pt-5 pb-0 text-center">
+                          <h4 class="card-title fs-16 lh-2 text-dark mb-0">Registration</h4>
+                      </div>
+                  </a>
+              </div></div></div><div class="slick-slide slick-cloned" data-slick-index="-1" id="" aria-hidden="true" style="width: 199px;" tabindex="-1"><div><div class="box px-0 lg-py-6 py-3" style="width: 100%; display: inline-block;">
+                  <a href="#" class="card border-0 align-items-center justify-content-center pt-7 pb-5 px-3 shadow-hover-3 bg-transparent bg-hover-white text-decoration-none" tabindex="-1">
+                      <img src="https://www.dagadevelopers.com/assets/images/dagadev/legalopinion.png" alt="legal-img" width="64" height="64">
+                      <div class="card-body px-0 pt-5 pb-0 text-center">
+                          <h4 class="card-title fs-16 lh-2 text-dark mb-0">Legal Opinion</h4>
+                      </div>
+                  </a>
+              </div></div></div><div class="slick-slide" data-slick-index="0" aria-hidden="true" style="width: 199px;" tabindex="-1"><div><div class="box px-0 lg-py-6 py-3" style="width: 100%; display: inline-block;">
+                  <a href="#" class="card border-0 align-items-center justify-content-center pt-7 pb-5 px-3 shadow-hover-3 bg-transparent bg-hover-white text-decoration-none" tabindex="-1">
+                      <img src="https://www.dagadevelopers.com/assets/images/dagadev/documentation.png" alt="documentation-img" width="64" height="64">
+                      <i class="fa-light fa-files"></i>
+                      <div class="card-body px-0 pt-5 pb-0 text-center">
+                          <h4 class="card-title fs-16 lh-2 text-dark mb-0">Documentation Service</h4>
+                      </div>
+                  </a>
+              </div></div></div><div class="slick-slide" data-slick-index="1" aria-hidden="true" style="width: 199px;" tabindex="-1"><div><div class="box px-0 lg-py-6 py-3" style="width: 100%; display: inline-block;">
+                  <a href="#" class="card border-0 align-items-center justify-content-center pt-7 pb-5 px-3 shadow-hover-3 bg-transparent bg-hover-white text-decoration-none" tabindex="-1">
+                      <img src="https://www.dagadevelopers.com/assets/images/dagadev/interiordesign.png" alt="interior Design-img" width="64" height="64">
+                      <div class="card-body px-0 pt-5 pb-0 text-center">
+                          <h4 class="card-title fs-16 lh-2 text-dark mb-0">Interior Design References</h4>
+                      </div>
+                  </a>
+              </div></div></div><div class="slick-slide" data-slick-index="2" aria-hidden="true" style="width: 199px;" tabindex="-1"><div><div class="box px-0 lg-py-6 py-3" style="width: 100%; display: inline-block;">
+                  <a href="#" class="card border-0 align-items-center justify-content-center pt-7 pb-5 px-3 shadow-hover-3 bg-transparent bg-hover-white text-decoration-none" tabindex="-1">
+                      <img src="https://www.dagadevelopers.com/assets/images/dagadev/construction.png" alt="construction-img" width="64" height="64">
+                      <div class="card-body px-0 pt-5 pb-0 text-center">
+                          <h4 class="card-title fs-16 lh-2 text-dark mb-0">Construction Reference</h4>
+                      </div>
+                  </a>
+              </div></div></div><div class="slick-slide slick-current slick-active" data-slick-index="3" aria-hidden="false" style="width: 199px;"><div><div class="box px-0 lg-py-6 py-3" style="width: 100%; display: inline-block;">
+                  <a href="#" class="card border-0 align-items-center justify-content-center pt-7 pb-5 px-3 shadow-hover-3 bg-transparent bg-hover-white text-decoration-none" tabindex="0">
+                      <img src="https://www.dagadevelopers.com/assets/images/dagadev/appartment.png" alt="appartment-img" width="64" height="64">
+                      <div class="card-body px-0 pt-5 pb-0 text-center">
+                          <h4 class="card-title fs-16 lh-2 text-dark mb-0">Apartment</h4>
+                      </div>
+                  </a>
+              </div></div></div><div class="slick-slide slick-active" data-slick-index="4" aria-hidden="false" style="width: 199px;"><div><div class="box px-0 lg-py-6 py-3" style="width: 100%; display: inline-block;">
+                  <a href="#" class="card border-0 align-items-center justify-content-center pt-7 pb-5 px-3 shadow-hover-3 bg-transparent bg-hover-white text-decoration-none" tabindex="0">
+                      <img src="https://www.dagadevelopers.com/assets/images/dagadev/registration.png" alt="registration.png-img" width="64" height="64">
+                      <div class="card-body px-0 pt-5 pb-0 text-center">
+                          <h4 class="card-title fs-16 lh-2 text-dark mb-0">Registration</h4>
+                      </div>
+                  </a>
+              </div></div></div><div class="slick-slide slick-active" data-slick-index="5" aria-hidden="false" style="width: 199px;"><div><div class="box px-0 lg-py-6 py-3" style="width: 100%; display: inline-block;">
+                  <a href="#" class="card border-0 align-items-center justify-content-center pt-7 pb-5 px-3 shadow-hover-3 bg-transparent bg-hover-white text-decoration-none" tabindex="0">
+                      <img src="https://www.dagadevelopers.com/assets/images/dagadev/legalopinion.png" alt="legal-img" width="64" height="64">
+                      <div class="card-body px-0 pt-5 pb-0 text-center">
+                          <h4 class="card-title fs-16 lh-2 text-dark mb-0">Legal Opinion</h4>
+                      </div>
+                  </a>
+              </div></div></div><div class="slick-slide slick-cloned slick-active" data-slick-index="6" id="" aria-hidden="false" style="width: 199px;" tabindex="-1"><div><div class="box px-0 lg-py-6 py-3" style="width: 100%; display: inline-block;">
+                  <a href="#" class="card border-0 align-items-center justify-content-center pt-7 pb-5 px-3 shadow-hover-3 bg-transparent bg-hover-white text-decoration-none" tabindex="0">
+                      <img src="https://www.dagadevelopers.com/assets/images/dagadev/documentation.png" alt="documentation-img" width="64" height="64">
+                      <i class="fa-light fa-files"></i>
+                      <div class="card-body px-0 pt-5 pb-0 text-center">
+                          <h4 class="card-title fs-16 lh-2 text-dark mb-0">Documentation Service</h4>
+                      </div>
+                  </a>
+              </div></div></div><div class="slick-slide slick-cloned slick-active" data-slick-index="7" id="" aria-hidden="false" style="width: 199px;" tabindex="-1"><div><div class="box px-0 lg-py-6 py-3" style="width: 100%; display: inline-block;">
+                  <a href="#" class="card border-0 align-items-center justify-content-center pt-7 pb-5 px-3 shadow-hover-3 bg-transparent bg-hover-white text-decoration-none" tabindex="0">
+                      <img src="https://www.dagadevelopers.com/assets/images/dagadev/interiordesign.png" alt="interior Design-img" width="64" height="64">
+                      <div class="card-body px-0 pt-5 pb-0 text-center">
+                          <h4 class="card-title fs-16 lh-2 text-dark mb-0">Interior Design References</h4>
+                      </div>
+                  </a>
+              </div></div></div><div class="slick-slide slick-cloned" data-slick-index="8" id="" aria-hidden="true" style="width: 199px;" tabindex="-1"><div><div class="box px-0 lg-py-6 py-3" style="width: 100%; display: inline-block;">
+                  <a href="#" class="card border-0 align-items-center justify-content-center pt-7 pb-5 px-3 shadow-hover-3 bg-transparent bg-hover-white text-decoration-none" tabindex="-1">
+                      <img src="https://www.dagadevelopers.com/assets/images/dagadev/construction.png" alt="construction-img" width="64" height="64">
+                      <div class="card-body px-0 pt-5 pb-0 text-center">
+                          <h4 class="card-title fs-16 lh-2 text-dark mb-0">Construction Reference</h4>
+                      </div>
+                  </a>
+              </div></div></div><div class="slick-slide slick-cloned" data-slick-index="9" id="" aria-hidden="true" style="width: 199px;" tabindex="-1"><div><div class="box px-0 lg-py-6 py-3" style="width: 100%; display: inline-block;">
+                  <a href="#" class="card border-0 align-items-center justify-content-center pt-7 pb-5 px-3 shadow-hover-3 bg-transparent bg-hover-white text-decoration-none" tabindex="-1">
+                      <img src="https://www.dagadevelopers.com/assets/images/dagadev/appartment.png" alt="appartment-img" width="64" height="64">
+                      <div class="card-body px-0 pt-5 pb-0 text-center">
+                          <h4 class="card-title fs-16 lh-2 text-dark mb-0">Apartment</h4>
+                      </div>
+                  </a>
+              </div></div></div><div class="slick-slide slick-cloned" data-slick-index="10" id="" aria-hidden="true" style="width: 199px;" tabindex="-1"><div><div class="box px-0 lg-py-6 py-3" style="width: 100%; display: inline-block;">
+                  <a href="#" class="card border-0 align-items-center justify-content-center pt-7 pb-5 px-3 shadow-hover-3 bg-transparent bg-hover-white text-decoration-none" tabindex="-1">
+                      <img src="https://www.dagadevelopers.com/assets/images/dagadev/registration.png" alt="registration.png-img" width="64" height="64">
+                      <div class="card-body px-0 pt-5 pb-0 text-center">
+                          <h4 class="card-title fs-16 lh-2 text-dark mb-0">Registration</h4>
+                      </div>
+                  </a>
+              </div></div></div><div class="slick-slide slick-cloned" data-slick-index="11" id="" aria-hidden="true" style="width: 199px;" tabindex="-1"><div><div class="box px-0 lg-py-6 py-3" style="width: 100%; display: inline-block;">
+                  <a href="#" class="card border-0 align-items-center justify-content-center pt-7 pb-5 px-3 shadow-hover-3 bg-transparent bg-hover-white text-decoration-none" tabindex="-1">
+                      <img src="https://www.dagadevelopers.com/assets/images/dagadev/legalopinion.png" alt="legal-img" width="64" height="64">
+                      <div class="card-body px-0 pt-5 pb-0 text-center">
+                          <h4 class="card-title fs-16 lh-2 text-dark mb-0">Legal Opinion</h4>
+                      </div>
+                  </a>
+              </div></div></div></div></div><div class="slick-next slick-arrow" aria-label="Next" style=""><i class="far fa-angle-right"></i></div></div>
+          <div class="enq-btns py-3 text-center">
+              <a href="javascript:void(0)" class="btn btn-lg btn-success rounded-lg mt-sm-0 mt-0 mb-lg-0 mb-0  fs-14 enq_sites_btns">
+                  <p class=" mb-0 d-inline-block">Enquiry Now</p>
+              </a>
+          </div>
+      </div>
     </div>
-  </div>
-</section><!-- End Property Grid Single-->
+    <div class="bg-accent bg-patten-02 pt-lg-10 pt-5 pb-lg-11 pt-6 heading-up" data-animated-id="7">
+      <div class="container">
+          <h2 class="text-dark text-center mxw-751 fs-26 lh-184 px-md-11">We have the most listings and constant updates. So you’ll never miss out.</h2>
+          <span class="heading-divider mx-auto"></span>
+          <div class="row no-gutters mt-8">
+              <div class="col-lg-4 mb-6 mb-lg-0">
+                  <div class="card border-hover bg-transparent bg-hover-white shadow-hover-3 px-lg-8 px-5 py-5 hover-change-image">
+                      <div class="card-img-top d-flex align-items-end justify-content-lg-start justify-content-center">
+                          <img src="https://www.dagadevelopers.com/assets/images/dagadev/buyhome.png" alt="buy-home-icon" width="108" height="88">
+                      </div>
+                      <div class="card-body px-0 pt-6 pb-0">
+                          <a href="https://www.dagadevelopers.com/buy-properties" class="text-decoration-none d-flex align-items-center justify-content-lg-start justify-content-center"><h4 class="card-title fs-20 lh-1625 text-dark mb-1">Buy a New Home</h4>
+                          </a>
+                          <p class="card-text text-lg-left text-center">With our experts` advice, buying a home will become a hassle free process</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 mb-6 mb-lg-0">
+                  <div class="card border-hover bg-transparent bg-hover-white shadow-hover-3 px-lg-8 px-5 py-5 hover-change-image">
+                      <div class="card-img-top d-flex align-items-end justify-content-lg-start justify-content-center">
+                      <img src="https://www.dagadevelopers.com/assets/images/dagadev/sellhome.png" alt="sell-home-icon" width="116" height="96">
+                      </div>
+                      <div class="card-body px-0 pt-6 pb-0">
+                          <a href="https://www.dagadevelopers.com/sell-properties" class="text-decoration-none d-flex align-items-center justify-content-lg-start justify-content-center"><h4 class="card-title fs-20 lh-1625 text-dark mb-1 lh-1">Sell a Home</h4>
+                          </a>
+                          <p class="card-text text-lg-left text-center">With DAGA genuine customers get great value for your property</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 mb-6 mb-lg-0">
+                  <div class="card border-hover bg-transparent bg-hover-white shadow-hover-3 px-lg-8 px-5 py-5 hover-change-image">
+                      <div class="card-img-top d-flex align-items-end justify-content-lg-start justify-content-center">
+                      <img src="https://www.dagadevelopers.com/assets/images/dagadev/buyland.png" alt="buy-a-land" width="82" height="101">
+                      </div>
+                      <div class="card-body px-0 pt-6 pb-0">
+                          <a href="https://www.dagadevelopers.com/buy-properties" class="text-decoration-none d-flex align-items-center justify-content-lg-start justify-content-center">
+                              <h4 class="card-title fs-20 lh-1625 text-dark mb-1 d-flex">Buy a Land</h4>
+                          </a>
+                          <p class="card-text fs-16 text-lg-left text-center">With all documents verified, buy a land with full trust and confidence</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="enq-btns py-3 text-center mt-5">
+              <a href="javascript:void(0)" class="btn btn-lg btn-success rounded-lg mt-sm-0 mt-0 mb-lg-0 mb-0  fs-14 enq_sites_btns">
+                  <p class=" mb-0 d-inline-block">Enquiry Now</p>
+              </a>
+      </div>
+      </div>
+    </div>
+    <div class="text-white pt-8 pb-7" data-animated-id="8" style="background-color: #2ec96a;">
+      <div class="container">
+          <div class="row no-gutters">
+              <div class="col-sm-6 col-lg-3 mb-6 mb-sm-0 px-6 text-center">
+                  <div class="counterup fs-56 lh-1 mb-3 pt-2" data-start="0" data-end="20" data-decimals="0" data-duration="0" data-separator="">5</div>
+                  <div class="text-uppercase fs-13 lh-184 letter-spacing-163">YEARS OF EXPERIENCE</div>
+              </div>
+              <div class="col-sm-6 col-lg-3 mb-6 mb-sm-0 px-6 text-center">
+                  <div class="counterup fs-56 lh-1 mb-3 pt-2" data-start="0" data-end="1037" data-decimals="0" data-duration="0" data-separator="">1037</div>
+                  <div class="text-uppercase fs-13 lh-184 letter-spacing-163">SOLD PLOTS</div>
+              </div>
+              <div class="col-sm-6 col-lg-3 mb-6 mb-sm-0 px-6 text-center">
+                  <div class="d-flex align-items-center justify-content-center pt-lg-0 pt-5">
+                          <div class="counterup fs-56 lh-1 mb-3 pt-2" data-start="0" data-end="1435" data-decimals="0" data-duration="0" data-separator="">1435</div>
+                          <span class="fs-56 lh-1">+</span>
+                  </div>
+  
+                  <div class="text-uppercase fs-13 lh-184 letter-spacing-163">TOTAL PLOTS</div>
+              </div>
+              <div class="col-sm-6 col-lg-3 mb-6 mb-sm-0 px-6 text-center">
+                  <div class="d-flex align-items-center justify-content-center pt-lg-0 pt-5">
+                          <div class="counterup fs-56 lh-1 mb-3 pt-2" data-start="0" data-end="1000" data-decimals="0" data-duration="0" data-separator="">1000</div>
+                          <span class="fs-56 lh-1">+</span>
+                          </div>
+                  <div class="text-uppercase fs-13 lh-184 letter-spacing-163">HAPPY CUSTOMERS</div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <section class="py-3" style="background-color: #f3f6fa;">
+      <div class="container">
+        <form class="newsletterform py-6" id="newsletterform" action="https://www.radhasrealty.com/sendsubscribe" style="background: #ffffff;
+    padding: 0px 30px;
+    border-radius: 5px;">
+          <div class="newsletter_messages">
 
-<!-- You no longer need custom CSS since Bootstrap handles the layout -->
+          </div>
+          <h4 class="text-dark fs-20 mb-3 font-weight-500 lh-16">Subscribe to our newsletter</h4>
+          <div class="form-row align-items-center">
+            <div class="col-md-5 my-1">
+              <input type="text" class="form-control mb-md-0 mb-2" name="subricribe_name" id="subricribe_name"
+                placeholder="Name">
+            </div>
+            <div class="col-md-5 my-1">
+              <input type="email" class="form-control mb-md-0 mb-2" name="subricribe_email" id="subricribe_email"
+                placeholder="Email"
+                style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpiYmZkZTQxOS00ZGRkLWU5NDYtOWQ2MC05OGExNGJiMTA3N2YiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDAyNDkwMkRDOTIyMTFFNkI0MzFGRTk2RjM1OTdENTciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDAyNDkwMkNDOTIyMTFFNkI0MzFGRTk2RjM1OTdENTciIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OTU2NTE1NDItMmIzOC1kZjRkLTk0N2UtN2NjOTlmMjQ5ZGFjIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOmJiZmRlNDE5LTRkZGQtZTk0Ni05ZDYwLTk4YTE0YmIxMDc3ZiIv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&quot;) !important; background-repeat: no-repeat; background-size: 20px; background-position: 97% center; cursor: auto;"
+                data-temp-mail-org="1">
+            </div>
+            <div class="col-md-2 my-1">
+              <button type="submit" class="btn btn-success w-100 mt-lg-0 mt-2">Subscribe</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- side buttons start -->
+    <!-- phone button start -->
+    <style>
+      .call-buton .cc-calto-action-ripple {
+        z-index: 99999;
+        position: fixed;
+        right: 15px;
+        bottom: 8rem;
+        background: #03bb50;
+        width: 4rem;
+        height: 4rem;
+        padding: 1rem;
+        border-radius: 100%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        color: #ffffff;
+        -webkit-animation: cc-calto-action-ripple 0.6s linear infinite;
+        animation: cc-calto-action-ripple 0.6s linear infinite;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        justify-items: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-decoration: none;
+      }
 
-        
+      .call-buton .cc-calto-action-ripple i {
+        -webkit-transition: 0.3s ease;
+        transition: 0.3s ease;
+        font-size: 2.2rem;
+      }
 
-  </main><!-- End #main -->
+      .call-buton .cc-calto-action-ripple:hover i {
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+      }
+    </style>
+    <div class="call-buton">
+      <a href="tel:9443126492" type="button" class="cc-calto-action-ripple">
+        <i class="fa-solid fa-phone"></i>
+      </a>
+    </div>
+    <!-- phone button end -->
+    <!-- whatsapp button  start -->
+    <div class="whatsapp-button">
+      <a href="https://api.whatsapp.com/send?phone=9443126492" target="_blank" class="  cc-calto-action-ripple">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+    </div>
+    <style>
+      /* Custom styles */
+      .whatsapp-button .cc-calto-action-ripple {
+        z-index: 99999;
+        position: fixed;
+        left: 15px;
+        bottom: 8rem;
+        background: #03bb50;
+        width: 4rem;
+        height: 4rem;
+        padding: 1rem;
+        border-radius: 100%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        color: #ffffff;
+        -webkit-animation: cc-calto-action-ripple 0.6s linear infinite;
+        animation: cc-calto-action-ripple 0.6s linear infinite;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        justify-items: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-decoration: none;
+      }
 
-    <!-- ======= Footer ======= -->
-    <section class="section-footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-6">
-              <div class="widget-a">
-                <div class="w-header-a">
-                  <a class="navbar-brand text-brand" href="index.html">Radha <span class="color-b">Reality</span></a>
+      .whatsapp-button .cc-calto-action-ripple i {
+        -webkit-transition: 0.3s ease;
+        transition: 0.3s ease;
+        font-size: 2.2rem;
+      }
+
+      .whatsapp-button .cc-calto-action-ripple:hover i {
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+      }
+    </style>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- whatsapp button  end -->
+    <!-- side buttons end  -->
+  </main>
+
+  <footer>
+    <div class=" pt-xl-8 pt-6 pb-6 footer text-muted text-light" style="background-color: #2ec96a;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-5 mb-lg-6 mb-3">
+            <a class=" d-inline-block" href="index.html">
+              <img src="images/logo/logo.JPG" class="rounded" alt="radhasrealty">
+            </a>
+            <div class="my-4 font-weight-500 text-light">We have been into the business for more than 5 years since our
+              incorporation into this business we have emerged as the leading real estate and most trusted company in
+              Thiruvannamalai.</div>
+            <ul class="list-inline mb-0">
+
+              <li class="list-inline-item mr-5">
+                <a href="https://www.facebook.com/radhasrealty/" target="_blank"
+                  class="text-dark opacity-5 fs-18 opacity-hover-10"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li class="list-inline-item mr-5">
+                <a href="https://www.instagram.com/radhasrealty/" target="_blank"
+                  class="text-dark opacity-5 fs-18 opacity-hover-10">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li class="list-inline-item mr-5">
+                <a href="https://twitter.com/radhasrealty" target="_blank"
+                  class="text-dark opacity-5 fs-18 opacity-hover-10"><i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item mr-5">
+                <a href="http://in.linkedin.com/company/radhasrealty" target="_blank"
+                  class="text-dark opacity-5 fs-18 opacity-hover-10">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li class="list-inline-item mr-5">
+                <a href="https://www.youtube.com/@radhasrealty/videos" target="_blank"
+                  class="text-dark opacity-5 fs-18 opacity-hover-10">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </li>
+            </ul>
+
+          </div>
+
+          <div class="col-md-6 col-lg-2 mb-lg-6  mb-3">
+            <h4 class="text-white fs-16 my-4 font-weight-500 lh-16">Useful Links</h4>
+            <ul class="list-group list-group-flush list-group-no-border">
+              <li class="list-group-item bg-transparent p-0">
+                <a href="about.html" class="text-light lh-26 font-weight-500 hover-dark">About</a>
+              </li>
+              <li class="list-group-item bg-transparent p-0">
+                <a href="projects.html" class="text-light lh-26 font-weight-500 hover-dark">Projects</a>
+              </li>
+              <li class="list-group-item bg-transparent p-0">
+                <a href="construction.html" class="text-light lh-26 font-weight-500 hover-dark">Construction</a>
+              </li>
+              <li class="list-group-item bg-transparent p-0">
+                <a href="buyproperty.html" class="text-light lh-26 font-weight-500 hover-dark">Buy Property</a>
+              </li>
+              <li class="list-group-item bg-transparent p-0">
+                <a href="sellproperty.html" class="text-light lh-26 font-weight-500 hover-dark">Sell Property</a>
+              </li>
+              <li class="list-group-item bg-transparent p-0">
+                <a href="contact.html" class="text-light lh-26 font-weight-500 hover-dark">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-6 col-lg-2 mb-lg-6 mb-3">
+
+          </div>
+
+          <div class="col-md-6 col-lg-3 mb-lg-6 mb-3 contact-portion">
+            <h4 class="text-white fs-16 my-4 font-weight-500 lh-16">Contact</h4>
+            <div class="lh-26 font-weight-500">
+              <div class="row align-items-center text-white">
+                <div class="col-1" style="max-width: 36px;">
+                  <p class="mb-0"><i class="fa-solid fa-clock"></i></p>
                 </div>
-                <div class="w-body-a">
-                  <p class="w-text-a color-text-a">
-                    We have been into the business for more than 20 years since our incorporation into this business we have emerged as the leading real estate and most trusted company in Thiruvanamalai.
-                  </p>
-                </div>
-                <div class="w-footer-a">
-    
+                <div class="col-10 pl-1">
+                  <p class="mb-0 text-light ">Mon – Sat: 8.00am 6.00pm</p>
                 </div>
               </div>
-            </div>
-            <div class="col-sm-12 col-md-1 section-md-t3">
-              
-            </div>
-            <div class="col-sm-12 col-md-5 section-md-t3">
-              <div class="w-body-a">
-                <h4 class="w-text-a color-text-a">
-                  <b>Via Contact</b>
-                </h4>
+              <!-- <p class="mb-0"><i class="fas fa-clock pr-2"></i>Mon – Sat: 8.00am 6.00pm</p> -->
+              <div class="row location align-items-start text-white">
+                <div class="col-1" style="max-width: 36px;">
+                  <p class="mb-0"><i class="fa-solid fa-location-dot"></i></p>
+                </div>
+                <div class="col-10 pl-1 ">
+                  <a class="text-light">No. 34-F, Polur Road, Tiruvannamalai - 606601</a>
+                </div>
               </div>
-              <div class="w-footer-a">
-                <ul class="list-unstyled">
-                  <li class="color-a">
-                    <span class="color-text-a">Email:</span> radharealtyofficial@gmail.com
-                  </li>
-                  <li class="color-a">
-                    <span class="color-text-a">Phone:</span>  +91 94431 26492
-                  </li>
-                </ul>
+              <div class="row align-items-center text-white">
+                <div class="col-1" style="max-width: 36px;">
+                  <p class="mb-0"><i class="fa-solid fa-envelope"></i></p>
+                </div>
+                <div class="col-10 pl-1">
+                  <a class="d-block text-white" href="mailto:radhasrealty@gmail.com">radhasrealty@gmail.com</a>
+                </div>
+              </div>
+              <div class="row Phone align-items-start text-white lh-2">
+                <div class="col-1" style="max-width: 36px;">
+                  <p class="mb-0"><i class="fa-solid fa-phone"></i></p>
+                </div>
+                <div class="col-10 pl-1 pr-0">
+                  <div>
+                    <a class="d-inline-block text-white font-weight-bold fs-15 hover-white" href="tel:+919443126492">+91
+                      9443126492</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
-      </section>
-      <footer>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <nav class="nav-footer">
-                <ul class="list-inline">
-                  <li class="list-inline-item">
-                    <a href="#">Home</a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#">About</a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#">Property</a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#">Contact</a>
-                  </li>
-                </ul>
-              </nav>
-              <div class="socials-a">
-                <ul class="list-inline">
-                  <li class="list-inline-item">
-                    <a href="#">
-                      <i class="bi bi-facebook" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#">
-                      <i class="bi bi-twitter" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#">
-                      <i class="bi bi-instagram" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#">
-                      <i class="bi bi-linkedin" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="copyright-footer">
-                <p class="copyright color-text-a">
-                  &copy; Copyright
-                  <span class="color-a">Radha Reality</span> All Rights Reserved.
-                </p>
-              </div>
-              <div class="credits">
-                Designed by <a href="#">jkglobalitsolutions</a>
-              </div>
-            </div>
-          </div>
+
+        <hr class="mt-6 mb-0">
+
+        <div class="mt-4 row">
+          <ul class="list-inline mb-0 col-md-6 mr-auto text-md-left text-center">
+            <li class="list-inline-item mr-6">
+              <a href="#" class="text-light lh-26 font-weight-500 hover-dark">Terms of Use</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="text-light lh-26 font-weight-500 hover-dark">Privacy Policy</a>
+            </li>
+          </ul>
+          <p class="col-md-auto mb-0 text-light text-md-right text-center">
+            © 2024 Radha's Realty. All Rights Reserved
+          </p>
         </div>
-      </footer><!-- End  Footer -->
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-<script>
-  // Initialize Swiper for property carousel
-  var swiper = new Swiper('#property-carousel', {
-    loop: true,
-    autoplay: {
-      delay: 3000, // Delay between slides in milliseconds
-      disableOnInteraction: false, // Continue autoplay after interaction
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-
-  // Initialize Swiper for latest properties carousel
-  var latestPropertiesSwiper = new Swiper('#latest-properties-carousel', {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    autoplay: {
-      delay: 3000, // Delay between slides in milliseconds
-      disableOnInteraction: false, // Continue autoplay after interaction
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-</script>
-
+  <script src="js/script.js"></script>
 </body>
 
 </html>
